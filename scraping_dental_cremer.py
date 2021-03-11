@@ -8,14 +8,17 @@ def scraping_precos (url):
 
     produtos = soup.find_all('span', class_='base')
     c=1
+    nome_e_preco = []
     for produto in produtos:
-        print(produto.get_text())
+        nome_e_preco.append(produto.get_text())
 
     precos = soup.find_all('span', class_="price")
 
     for preco in precos:
         if len(precos) == 1:
-            print(preco.get_text())
+            nome_e_preco.append(preco.get_text())
         if len(precos) > 1 and c == 2:
-            print(preco.get_text())
+            nome_e_preco.append(preco.get_text())
         c += 1
+    
+    return nome_e_preco
