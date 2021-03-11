@@ -21,4 +21,4 @@ def scraping_precos (url):
             nome_e_preco.append(preco.get_text())
         c += 1
     
-    return nome_e_preco
+    print(nome_e_preco)

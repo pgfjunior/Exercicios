@@ -7,8 +7,6 @@ lista_de_urls_dos_produtos.sort()
 for url in lista_de_urls_dos_produtos:
     scraping_precos(url)
 
-print(nome_e_preco)
-
 precos_excel = Workbook()
 planilha1 = precos_excel.active
 planilha1.title='Dental Cremer'
